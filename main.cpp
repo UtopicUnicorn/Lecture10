@@ -1,4 +1,4 @@
-double my_pow(double a, unsigned int b)
+double my_pow(double a, int b)
 {
     double res = a;
     if (b == 0)
@@ -7,4 +7,10 @@ double my_pow(double a, unsigned int b)
     {
         res = res * a;
     }
+    if (b < 0)
+    {
+        res = 1 / res;
+        return res;
+    }
+    return res;
 }
